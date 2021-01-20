@@ -1,1 +1,17 @@
-<h1>hello lena</h1>
+<h1>Cocktails</h1>
+<ul>
+  <% @cocktails.each do |cocktail| %>
+    <li></li>
+    <div class="card" style="width: 18rem;">
+      <img src="https://picsum.photos/200/300" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"><%= link_to cocktail.name, cocktail_path(cocktail) %></h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  <% end %>
+</ul>
+<%= link_to 'New Cocktail', new_cocktail_path %>
+
+
